@@ -62,9 +62,11 @@ In reality we might have extremely large number of sentences. For significantly 
 
 ### 3. If you had two weeks to do this task, what would you have done differently? What would be better?
 With more time:
-1. **Optimize Algorithm**: Investigate more efficient algorithms or data structures to handle the problem, especially focusing on reducing the time complexity.
+1. **Optimize Algorithm**: Investigate more efficient **algorithms** or **data structures** to handle the problem, especially focusing on reducing the time complexity.
 2. **Concurrency**: Implement multi-threading or parallel processing for handling the comparisons, which could reduce processing time.
 3. **Unit Tests**: Even though they were deemed not important for this task, for a production-ready solution, unit tests are essential. They would ensure that every part of the code works correctly.
-4. **User Interface**: Implement a basic UI or command-line interface allowing the user to select input/output files, view results, etc.
-5. **Logging and Error Handling**: Integrate comprehensive logging and error-handling mechanisms.
-6. **Profiling and Benchmarking**: Profile the application to find any bottlenecks and benchmark the solution against different sizes of datasets to have a clear picture of performance and areas of improvement. Afterwards, perform optimizations.
+4. **Database**: Store the data not in a text-file but in a big database, such as ElasticSearch, PostgreSQL.
+6. **User Interface**: Implement a basic UI or command-line interface allowing the user to select input/output files, view results, etc.
+7. **Logging and Error Handling**: Integrate comprehensive logging and error-handling mechanisms.
+8. **Profiling and Benchmarking**: Profile the application to find any bottlenecks and benchmark the solution against different sizes of datasets to have a clear picture of performance and areas of improvement. Afterwards, perform optimizations.
+9. **Streaming model**: In case of large numbers of sentences then load only some of them each time to the memory in order to keep performance good.
