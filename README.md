@@ -2,11 +2,11 @@
 ### Overview of the solution:
 The solution takes a file containing the notes of a private investigator and processes it to find similar sentences where only one word differs. The approach was to break the functionality into modular classes, focusing on making the code readable, maintainable, and scalable.
 
-**NotesParser**: Responsible for converting the raw lines of input into a list of Entry objects.
-**EntryGrouper**: It groups the Entry objects based on patterns with just one differing word.
-**OutputFormatter**: Formats the grouped entries into the required output format.
-**FileHandler**: Handles reading from and writing to files.
-**Main**: The main class that integrates all the above components.
+* **NotesParser**: Responsible for converting the raw lines of input into a list of Entry objects.
+* **EntryGrouper**: It groups the Entry objects based on patterns with just one differing word.
+* **OutputFormatter**: Formats the grouped entries into the required output format.
+* **FileHandler**: Handles reading from and writing to files.
+* **Main**: The main class that integrates all the above components.
 
 ### How to run?
 (First, Java should be installed on your system, the relevant JDK.)
