@@ -23,7 +23,7 @@ Open IntelliJ, and click on the "run" (Play) button inside the Main.java file.
    ```
    java Main
    ```
-3. The program reads from a file named **input.txt** and writes the results to a file named **output.txt**.
+   The program reads from a file named **input.txt** and writes the results to a file named **output.txt**.
 
 ### 1. What can you say about the complexity of your code?
 The most intensive part of the algorithm involves comparing each sentence with every other sentence. This gives a time complexity of O(n^2), where n is the number of sentences. For each pair of sentences, we perform another loop to compare the words inside the sentences, but since the number of words in a sentence can be considered relatively constant, this doesn't significantly affect the overall complexity. Therefore, the solution's main complexity remains O(n^2).
