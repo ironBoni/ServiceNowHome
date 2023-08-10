@@ -10,7 +10,7 @@ The solution takes a file containing the notes of a private investigator and pro
 
 ### How to run?
 (First, Java should be installed on your system, the relevant JDK.)
-Place the input file as "input.txt" in the same location of all the classes you cloned.
+Place the input file as "input.txt" in the same location of all the classes you cloned. \\
 **Option 1**:
 Open IntelliJ, and click on the "run" (Play) button inside the Main.java file.
 
