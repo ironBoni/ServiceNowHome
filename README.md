@@ -1,38 +1,40 @@
 ## README - ServiceNow Home Assignment
 ### Overview of the solution:
-Our solution reads through a file containing investigator notes and identifies sentences that 
-are similar (i.e., they differ by only one word). For each pair of similar sentences, the program 
-notes the differing word(s). The results are then written to an output file in the desired format.
+The solution takes a file containing the notes of a private investigator and processes it to find similar sentences where only one word differs. The approach was to break the functionality into modular classes, focusing on making the code readable, maintainable, and scalable.
+
+**NotesParser**: Responsible for converting the raw lines of input into a list of Entry objects.
+**EntryGrouper**: It groups the Entry objects based on patterns with just one differing word.
+**OutputFormatter**: Formats the grouped entries into the required output format.
+**FileHandler**: Handles reading from and writing to files.
+**Main**: The main class that integrates all the above components.
 
 ### How to run?
-1. Ensure you have Java installed on your system.
-2. Save the provided code as InvestigatorNotesProcessor.java.
-3. Compile the program using the command:
+(First, Java should be installed on your system, the relevant JDK.)
+Place the input file as "input.txt" in the same location of all the classes you cloned.
+**Option 1**:
+Open IntelliJ, and click on the "run" (Play) button inside the Main.java file.
+
+**Option 2**:
+1. Compile the program using the command:
    ```
-   javac InvestigatorNotesProcessor.java
+   javac Main.java
    ```
-4. Run the program using the command:
+2. Run the program using the command:
    ```
-   java InvestigatorNotesProcessor
+   java Main
    ```
-5. The program reads from a
-   file named input.txt and writes the results to a file named output.txt by default.
+3. The program reads from a file named **input.txt** and writes the results to a file named **output.txt**.
 
 ### 1. What can you say about the complexity of your code?
-The core of the algorithm involves comparing every sentence with every other sentence, 
-which makes it O(n^2) where n is the number of sentences. For each sentence pair, we're 
-comparing every word, making the complexity O(n^2 * m) where m is the average number of 
-words in each sentence.
+The most intensive part of the algorithm involves comparing each sentence with every other sentence. This gives a time complexity of O(n^2), where n is the number of sentences. For each pair of sentences, we perform another loop to compare the words inside the sentences, but since the number of words in a sentence can be considered relatively constant, this doesn't significantly affect the overall complexity. Therefore, the solution's main complexity remains O(n^2).
 
 ### 2. How will your algorithm scale?
-This algorithm does not scale well for very large inputs due to its quadratic complexity. For example, with 10,000 sentences, we'd have around 100 million comparisons.
-
+Considering the O(n^2) complexity, the algorithm may not be efficient for an extremely large number of sentences. However, as stated in the assumptions, the file's structure can be entirely loaded into memory. As such, for a reasonably large set of sentences, this solution will work effectively. For significantly larger datasets, we would need to reconsider our approach, possibly using more sophisticated data structures or algorithms to identify similarities between sentences.
 ### 3. If you had two weeks to do this task, what would you have done differently? What would be better?
 With more time:
-
-We could optimize the solution by sorting the sentences based on their length or using more advanced data structures like Trie for more efficient comparisons.
-Implement multithreading to parallelize the comparison tasks.
-Break down the main method into more granular methods for better readability and modularity.
-Implement unit tests for different scenarios.
-Create a more interactive interface or command-line arguments to specify the input and output files rather than hardcoding them.
-This solution uses simple data structures, and the goal was to keep it as straightforward and readable as possible without adding unnecessary complexity.
+1. **Optimize Algorithm**: Investigate more efficient algorithms or data structures to handle the problem, especially focusing on reducing the time complexity.
+2. **Concurrency**: Implement multi-threading or parallel processing for handling the comparisons, which could reduce processing time.
+3. **Unit Tests**: Even though they were deemed not important for this task, for a production-ready solution, unit tests are essential. They would ensure that every part of the code works correctly.
+4. **User Interface**: Implement a basic UI or command-line interface allowing the user to select input/output files, view results, etc.
+5. **Logging and Error Handling**: Integrate comprehensive logging and error-handling mechanisms.
+6. **Profiling and Benchmarking**: Profile the application to find any bottlenecks and benchmark the solution against different sizes of datasets to have a clear picture of performance and areas of improvement.
