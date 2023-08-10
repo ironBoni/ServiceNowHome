@@ -58,7 +58,7 @@ Therefore, the time complexity is O((n^2) * m), where n is the number of entries
 
 
 ### 2. How will your algorithm scale?
-In reality we might have extremely large number of sentences. For significantly larger datasets, we would need to reconsider our approach (of loading all the sentences at once to the memory), possibly using more sophisticated data structures or algorithms to identify similarities between sentences or load just parts of the data and all of it at once.
+In reality we might have extremely large number of sentences. For significantly larger datasets, we would need to reconsider our approach (of loading all the sentences at once to the memory), possibly using more sophisticated data structures or algorithms to identify similarities between sentences and load only parts of the data and all of it at once.
 
 ### 3. If you had two weeks to do this task, what would you have done differently? What would be better?
 With more time:
