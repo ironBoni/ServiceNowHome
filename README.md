@@ -1,4 +1,4 @@
-## README - ServiceNow Home Assignment
+## README - ServiceNow Home Assignment - Noam Cohen
 ### Overview of the solution:
 The solution takes a file containing the notes of a private investigator and processes it to find similar sentences where only one word differs. The approach was to break the functionality into modular classes, focusing on making the code readable, maintainable, and scalable.
 
