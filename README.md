@@ -89,7 +89,7 @@ If there's a need to notify other components about changes or events (e.g., when
 For transferring data between layers or components, DTOs can be employed to ensure that only necessary data is passed around without exposing the domain model.
 12. **Encapsulation and Modularity**:
 Ensure that each class has a single responsibility, and its internal workings are hidden from outside classes. Public interfaces should expose only necessary methods, ensuring the principle of information hiding.
-13. **User Interface**: Implement a basic UI or command-line interface allowing the user to select input/output files, view results, etc.
+13. **User Interface**: Implement a UI or command-line interface allowing the user to select input/output files, view results, etc.
 14. **Logging and Error Handling**: Integrate comprehensive logging and error-handling mechanisms.
 15. **Profiling and Benchmarking**: Profile the application to find any bottlenecks and benchmark the solution against different sizes of datasets to have a clear picture of performance and areas of improvement. Afterwards, perform optimizations.
 16. **Elasticsearch** can significantly improve the system's scalability and performance when dealing with an extremely large number of sentences, especially longer ones. Here's how Elasticsearch can be utilized in this context:
