@@ -109,7 +109,8 @@ Aggregations can provide summarized data about the search results, such as frequ
 * *Real-Time Indexing*:
 As new sentences are added, ES can index them in near real-time, ensuring the latest data is always searchable without significant delays.
 * *Efficient Storage*:
-ES compresses data for storage, making it suitable for storing vast amounts of text data.
+ES compresses data for storage, making it suitable for storing vast amounts of text data.<br/>
+
 *How to Integrate in the System*:
 * **Data Ingestion**: Import all the sentences into an Elasticsearch index.
 * **Querying for Similarities**: When checking for similar sentences, run a query on ES, which will return potential matches based on the implemented criteria.
