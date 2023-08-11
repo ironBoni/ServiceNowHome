@@ -114,6 +114,6 @@ ES compresses data for storage, making it suitable for storing vast amounts of t
 *How to Integrate in the System*:
 * **Data Ingestion**: Import all the sentences into an Elasticsearch index.
 * **Querying for Similarities**: When checking for similar sentences, run a query on ES, which will return potential matches based on the implemented criteria.
-* **Storing Results**: The results, i.e., groups of similar sentences, can be stored in a separate index or a relational database, depending on the application's requirements.
+* **Results**: The results, i.e., groups of similar sentences, can be stored in a separate index or a relational database.
 
 17. Alternatively, in case of large numbers of sentences then load only some of them each time to the memory in order to keep performance good.
